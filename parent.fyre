@@ -1,0 +1,67 @@
+import requests
+
+def ssr_request():
+  text = "Hello 👋"
+  if text != "":
+    return text + ". This is the response from the server side"
+  else:
+    return "No response"
+
+def increment(e):
+  initial_value = get_counter_signal() # this doesn't subscribe
+  set_counter_signal(initial_value + 1)
+
+<pyml>
+    <span>
+      <div>
+        {ssr_request()}
+      </div>
+      <span>
+        This is an example counter app.
+      </span>
+
+      <b>
+        {use_counter_signal()}
+      </b>
+
+      <div> 
+        This won't be re-rendered
+      </div>
+      <b>
+        {get_counter_signal()}
+      </b>
+      <div>
+        Press the button to see.
+      </div>
+      <button onclick={increment}>
+        Increment counter
+      </button>
+      <div>
+        The project is in very early stage and is breaking at various places.
+      </div>
+
+      <div>
+      Some ideas that I am using at the moment:
+      </div>
+      <div>
+      - recoil like state managment
+      </div>
+      <div>
+      - custom langauage called pyml
+      </div>
+      <div>
+      - different sections for client side and server side python
+      </div>
+      <div>
+      - single file css and html support
+      </div>
+
+      <b>
+      Star Starfyre on GitHub
+      </b>
+      <a href="https://github.com/sansyrox/starfyre">
+      https://github.com/sansyrox/starfyre
+      </a>
+    </span>
+</pyml>
+
