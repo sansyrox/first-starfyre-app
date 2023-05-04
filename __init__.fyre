@@ -19,22 +19,49 @@ async def handle_on_click(e):
 
 <style>
   body {
-    background-color: red;
+    background: url('https://images.pexels.com/photos/7130469/pexels-photo-7130469.jpeg?cs=srgb&dl=pexels-codioful-%28formerly-gradienta%29-7130469.jpg&fm=jpg');
   }
   
 #root {
   text-align: center;
-  font-size: 5rem;
+  height: 100%;
+  widht: 100%;
+  font-size: 4rem;
 }
+
+.wrapper {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 </style>
 
 <pyml>
   <store>
-    <parent hello='world'>
-        <b>
-          This is an example counter app.
-        </b>
-    </parent>
+    <div class="wrapper">
+      <parent hello='world'>
+        <div class="header">
+          <b>
+            Welcome to the first Starfyre(⭐🔥) App! 
+          </b>
+          <div>
+            This page aims to showcase the direction and vistion of Starfyre. 
+          </div>
+          <div>
+            We showcase the state store, server side rendering, client side rendering.
+          </div>
+          <b>
+            All in Python!
+          </b>
+          <b>&nbsp;</b>
+        </div>
+      </parent>
+    </div>
   </store>
 </pyml>
 

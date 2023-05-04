@@ -1,0 +1,42 @@
+
+<style>
+
+.footer {
+  padding-top: 10%;
+}
+
+</style>
+
+<pyml>
+    <span>
+      <div class="footer">
+        <div>
+          The project is in very early stage and is breaking at various places.
+        </div>
+
+        <div>
+        Some ideas that I am using at the moment:
+        </div>
+        <div>
+        - recoil like state managment
+        </div>
+        <div>
+        - custom langauage called pyml
+        </div>
+        <div>
+        - different sections for client side and server side python
+        </div>
+        <div>
+        - single file css and html support
+        </div>
+
+        <b>
+        Star Starfyre on GitHub
+        </b>
+        <a href="https://github.com/sansyrox/starfyre">
+        https://github.com/sansyrox/starfyre
+        </a>
+      </div>
+    </span>
+</pyml>
+

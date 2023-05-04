@@ -1,67 +1,63 @@
-import requests
+
+from .footer import footer
 
 def ssr_request():
-  text = "Hello 👋"
-  if text != "":
-    return text + ". This is the response from the server side"
-  else:
-    return "No response"
+  return "And this text is rendered from the server."
 
 def increment(e):
   initial_value = get_counter_signal() # this doesn't subscribe
   set_counter_signal(initial_value + 1)
 
+<style>
+
+button {
+  background-color: black;
+  border: solid 2px black;
+  padding: .375em 1.125em;
+  font-size: 1rem;
+  color: white;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.counter {
+  padding-top: 10%;
+}
+
+</style>
+
 <pyml>
     <span>
-      <div>
-        {ssr_request()}
-      </div>
-      <span>
-        This is an example counter app.
-      </span>
-
-      <b>
-        {use_counter_signal()}
-      </b>
-
-      <div> 
-        This won't be re-rendered
-      </div>
-      <b>
-        {get_counter_signal()}
-      </b>
-      <div>
-        Press the button to see.
-      </div>
-      <button onclick={increment}>
-        Increment counter
-      </button>
-      <div>
-        The project is in very early stage and is breaking at various places.
-      </div>
-
-      <div>
-      Some ideas that I am using at the moment:
-      </div>
-      <div>
-      - recoil like state managment
-      </div>
-      <div>
-      - custom langauage called pyml
-      </div>
-      <div>
-      - different sections for client side and server side python
-      </div>
-      <div>
-      - single file css and html support
-      </div>
-
-      <b>
-      Star Starfyre on GitHub
-      </b>
-      <a href="https://github.com/sansyrox/starfyre">
-      https://github.com/sansyrox/starfyre
-      </a>
+      <footer>
+        <div class="counter">
+          <span>
+            We have a counter below!
+          </span>
+          <div>
+            {ssr_request()}
+          </div>
+          <b>
+            {use_counter_signal()}
+          </b>
+          <div>
+            This text will re render on button click, as this state object subscribes.
+          </div>
+          <b>
+            {get_counter_signal()}
+          </b>
+          <div> 
+            This text won't be re-rendered, as this state object doesn't subscribe.
+          </div>
+          <button onclick={increment}>
+          Increment counter
+          </button>
+        </div>
+      </footer>
     </span>
 </pyml>
 
