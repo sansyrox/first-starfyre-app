@@ -3,6 +3,7 @@
 
 .footer {
   padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 </style>
@@ -37,6 +38,12 @@
         https://github.com/sansyrox/starfyre
         </a>
       </div>
+        <b>
+        Source Code for this web page
+        </b>
+        <a targe="_blank" href="https://github.com/sansyrox/first-starfyre-app">
+        https://github.com/sansyrox/first-starfyre-app
+        </a>
     </span>
 </pyml>
 
