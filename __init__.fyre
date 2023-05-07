@@ -24,9 +24,21 @@ async def handle_on_click(e):
   
 #root {
   text-align: center;
-  height: 100%;
-  widht: 100%;
-  font-size: 4rem;
+  height: 100vh;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width:468px) {
+#root {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 468px){
+#root {
+  font-size: 1.5rem;
+  }
 }
 
 .wrapper {
@@ -40,7 +52,7 @@ async def handle_on_click(e):
 }
 
 .header {
-  padding-top: 5%;
+  padding-top: 5vh;
 }
 
 </style>
@@ -54,10 +66,10 @@ async def handle_on_click(e):
             Welcome to the first Starfyre(⭐🔥) App! 
           </b>
           <div>
-            This page aims to showcase the direction and vistion of Starfyre. 
+            This page aims to showcase the direction and vision of Starfyre. 
           </div>
           <div>
-            We showcase the state store, server side rendering, client side rendering.
+            We aim to showcase the state store, server side rendering, and client side rendering.
           </div>
           <b>
             All in Python!
